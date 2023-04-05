@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vučko SKI Kup Bjelašnica</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h2 class="logo">Vučko SKI Kup</h2>
-        <nav class="navigation">
-            <a href="index.html">Glavni meni</a>
-            <a href="disciplines.html">Discipline</a>
-            <a href="competitors.html">Takmičari</a>
-            <a href="schedule.html">Raspored</a>
-            <button onclick="window.location.href='login.html'" class="btnLogin-popup">Prijava</button>
-        </nav>
+      <h2 class="logo">Vučko SKI Kup</h2>
+      <nav class="navigation">
+        <a href="index.html">Glavni meni</a>
+        <a href="disciplines.html">Discipline</a>
+        <a href="competitors.html">Takmičari</a>
+        <a href="schedule.html">Raspored</a>
+        <button
+          onclick="window.location.href='login.html'"
+          class="btnLogin-popup"
+        >
+          Prijava
+        </button>
+      </nav>
     </header>
 
     <div class="container">
-        <h1 class="form-title">Unesi novog takmičara u sistem</h1>
-        <form action="#">
-          <div class="main-user-info">
-            <div class="user-input-box">
-              <label>Ime</label>
-              <input type="text"
-                      id="firstName"
-                      placeholder="Ime"/>
-            </div>
-            <div class="user-input-box">
-              <label>Prezime</label>
-              <input type="text"
-                      id="lastName"
-                      placeholder="Prezime"/>
-            </div>
-            <div class="user-input-box">
-              <label>Nacionalnost</label>
-              <input type="text"
-                      id="nationality"
-                      placeholder="Nacionalnost"/>
-            </div>
-            <div class="user-input-box">
-              <label>Disciplina</label>
-              <input type="text"
-                      id="discipline"
-                      placeholder="Disciplina"/>
-            </div>
-            <div class="user-input-box">
-              <label>Godiste</label>
-              <input type="text"
-                      id="yearOfBirth"
-                      placeholder="Godiste"/>
-            </div>
-            <div class="user-input-box">
-              <label>Redni broj</label>
-              <input type="text"
-                      id="ordinalNumber"
-                      placeholder="Redni broj"/>
-            </div>
-          </div>
-          <div class="gender-details-box">
-            <span class="gender-title">Spol</span>
-            <div class="gender-category">
-              <input type="radio" name="gender" id="male">
-              <label for="male">Muško</label>
-              <input type="radio" name="gender" id="female">
-              <label for="female">Žensko</label>
-            </div>
-          </div>
-          <div class="form-submit-btn">
-            <button class="btnSave" type="submit" id="btnSave">Spasi</button>
-          </div>
-        </form>
+      <h1 class="form-title">Unesi novog takmičara u sistem</h1>
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <label>Ime</label>
+          <input type="text" id="firstName" placeholder="Ime" />
+        </div>
+        <div class="user-input-box">
+          <label>Prezime</label>
+          <input type="text" id="lastName" placeholder="Prezime" />
+        </div>
+        <div class="user-input-box">
+          <label>Nacionalnost</label>
+          <input type="text" id="nationality" placeholder="Nacionalnost" />
+        </div>
+        <div class="user-input-box">
+          <label>Disciplina</label>
+          <input type="text" id="discipline" placeholder="Disciplina" />
+        </div>
+        <div class="user-input-box">
+          <label>Godiste</label>
+          <input type="text" id="yearOfBirth" placeholder="Godiste" />
+        </div>
+        <div class="user-input-box">
+          <label>Redni broj</label>
+          <input type="text" id="ordinalNumber" placeholder="Redni broj" />
+        </div>
       </div>
+      <div class="gender-details-box">
+        <span class="gender-title">Spol</span>
+        <div class="gender-category">
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Muško</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Žensko</label>
+        </div>
+      </div>
+      <div class="form-submit-btn">
+        <button
+          onclick="saveCompetitor()"
+          class="btnSave register-link"
+          id="btnSave"
+        >
+          Spasi
+        </button>
+      </div>
+    </div>
 
     <div class="footer">
       <p>Alen Lović @ 2023</p>
-      </div>
-      <script src="javascript/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    </div>
+    <script src="javascript/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

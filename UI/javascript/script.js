@@ -6,23 +6,6 @@ const disciplinaInput = document.querySelector("#discipline");
 const godisteInput = document.querySelector("#yearOfBirth");
 const redniBrojInput = document.querySelector("#ordinalNumber");
 
-/* login-register */
-
-const wrapper = document.querySelector('.wrapper');
-
-const registerLink = document.querySelector('.register-link');
-registerLink.addEventListener('click', () => {
-  wrapper.classList.add('active');
-});
-
-const loginLink = document.querySelector('.login-link');
-loginLink.addEventListener('click', ()=> {
-    wrapper.classList.remove('active');
-});
-
-
- /* -------------- */
-
 function addCompetitor(
   ime,
   prezime,
@@ -91,3 +74,20 @@ function saveCompetitor() {
 }
 
 getAllCompetitors();
+
+/* login-register 
+
+const wrapper = document.querySelector('.wrapper');
+
+const registerLink = document.querySelector('.register-link');
+registerLink.addEventListener('click', () => {
+  wrapper.classList.add('active');
+});
+
+const loginLink = document.querySelector('.login-link');
+loginLink.addEventListener('click', ()=> {
+    wrapper.classList.remove('active');
+});
+
+
+ -------------- */

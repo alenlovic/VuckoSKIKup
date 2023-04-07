@@ -6,7 +6,7 @@ const disciplinaInput = document.querySelector("#discipline");
 const godisteInput = document.querySelector("#yearOfBirth");
 const redniBrojInput = document.querySelector("#ordinalNumber");
 
-/* login-register 
+/* login-register */
 
 const wrapper = document.querySelector('.wrapper');
 
@@ -21,7 +21,7 @@ loginLink.addEventListener('click', ()=> {
 });
 
 
- -------------- */
+ /* -------------- */
 
 function addCompetitor(
   ime,

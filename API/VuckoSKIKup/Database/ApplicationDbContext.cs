@@ -12,6 +12,6 @@ namespace VuckoSKIKup.Database
 
         public DbSet<TakmicariModel> Takmicari { get; set; }
         public DbSet<DisciplineModel> Discipline { get; set; }
-        public DbSet<StazeModel> Staze { get; set; }
+        public DbSet<RasporedModel> Raspored { get; set; }
     }
 }

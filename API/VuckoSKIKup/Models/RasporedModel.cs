@@ -12,6 +12,6 @@ namespace VuckoSKIKup.Models
         public string NacionalnostTakmičara { get; set; }
         public string Disciplina { get; set; }
         public string Staza { get; set; }
-        public string VrijemePolaska { get; set; }
+        public string Kategorija { get; set; }
     }
 }

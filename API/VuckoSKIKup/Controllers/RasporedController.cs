@@ -12,55 +12,55 @@ namespace VuckoSKIKup.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StazeController : ControllerBase
+    public class RasporedController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public StazeController(ApplicationDbContext context)
+        public RasporedController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Staze
+        // GET: api/Raspored
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<StazeModel>>> GetStaze()
+        public async Task<ActionResult<IEnumerable<RasporedModel>>> GetRaspored()
         {
-          if (_context.Staze == null)
+          if (_context.Raspored == null)
           {
               return NotFound();
           }
-            return await _context.Staze.ToListAsync();
+            return await _context.Raspored.ToListAsync();
         }
 
-        // GET: api/Staze/5
+        // GET: api/Raspored/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<StazeModel>> GetStazeModel(int id)
+        public async Task<ActionResult<RasporedModel>> GetRasporedModel(int id)
         {
-          if (_context.Staze == null)
+          if (_context.Raspored == null)
           {
               return NotFound();
           }
-            var stazeModel = await _context.Staze.FindAsync(id);
+            var rasporedModel = await _context.Raspored.FindAsync(id);
 
-            if (stazeModel == null)
+            if (rasporedModel == null)
             {
                 return NotFound();
             }
 
-            return stazeModel;
+            return rasporedModel;
         }
 
-        // PUT: api/Staze/5
+        // PUT: api/Raspored/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutStazeModel(int id, StazeModel stazeModel)
+        public async Task<IActionResult> PutRasporedModel(int id, RasporedModel rasporedModel)
         {
-            if (id != stazeModel.ID)
+            if (id != rasporedModel.ID)
             {
                 return BadRequest();
             }
 
-            _context.Entry(stazeModel).State = EntityState.Modified;
+            _context.Entry(rasporedModel).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace VuckoSKIKup.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StazeModelExists(id))
+                if (!RasporedModelExists(id))
                 {
                     return NotFound();
                 }
@@ -81,44 +81,44 @@ namespace VuckoSKIKup.Controllers
             return NoContent();
         }
 
-        // POST: api/Staze
+        // POST: api/Raspored
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<StazeModel>> PostStazeModel(StazeModel stazeModel)
+        public async Task<ActionResult<RasporedModel>> PostRasporedModel(RasporedModel rasporedModel)
         {
-          if (_context.Staze == null)
+          if (_context.Raspored == null)
           {
-              return Problem("Entity set 'ApplicationDbContext.Staze'  is null.");
+              return Problem("Entity set 'ApplicationDbContext.Raspored'  is null.");
           }
-            _context.Staze.Add(stazeModel);
+            _context.Raspored.Add(rasporedModel);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetStazeModel", new { id = stazeModel.ID }, stazeModel);
+            return CreatedAtAction("GetRasporedModel", new { id = rasporedModel.ID }, rasporedModel);
         }
 
-        // DELETE: api/Staze/5
+        // DELETE: api/Raspored/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStazeModel(int id)
+        public async Task<IActionResult> DeleteRasporedModel(int id)
         {
-            if (_context.Staze == null)
+            if (_context.Raspored == null)
             {
                 return NotFound();
             }
-            var stazeModel = await _context.Staze.FindAsync(id);
-            if (stazeModel == null)
+            var rasporedModel = await _context.Raspored.FindAsync(id);
+            if (rasporedModel == null)
             {
                 return NotFound();
             }
 
-            _context.Staze.Remove(stazeModel);
+            _context.Raspored.Remove(rasporedModel);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool StazeModelExists(int id)
+        private bool RasporedModelExists(int id)
         {
-            return (_context.Staze?.Any(e => e.ID == id)).GetValueOrDefault();
+            return (_context.Raspored?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }

@@ -6,6 +6,8 @@ namespace VuckoSKIKup.Models
     {
         [Key]
         public int ID { get; set; }
-        public string Disciplina { get; set; }
+        public string Ime { get; set; }
+        public string Staza { get; set; }
+        public string Kategorija { get; set; }
     }
 }

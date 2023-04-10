@@ -6,6 +6,8 @@ const disciplinaInput = document.querySelector("#discipline");
 const godisteInput = document.querySelector("#yearOfBirth");
 const redniBrojInput = document.querySelector("#ordinalNumber");
 
+//competitors.html
+
 function addCompetitor(
   ime,
   prezime,
@@ -74,4 +76,7 @@ function saveCompetitor() {
 }
 
 getAllCompetitors();
+
+
+//disciplines.html
 

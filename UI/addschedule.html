@@ -19,7 +19,7 @@
         </nav>
     </header>
 
-    <form>
+    <form class="scheduleTable">
         <div>
           <label for="ime">Ime:</label>
           <input type="text" id="ime" required>
@@ -29,8 +29,8 @@
           <input type="text" id="prezime" required>
         </div>
         <div>
-          <label for="broj">Broj:</label>
-          <input type="text" id="broj" required>
+          <label for="broj">Redni broj:</label>
+          <input type="text" id="redniBroj" required>
         </div>
         <div>
           <label for="nacionalnost">Nacionalnost:</label>
@@ -53,7 +53,7 @@
             <option value="Veteran">Veteran</option>
           </select>
         </div>
-        <button type="submit">Prijavi se</button>
+        <button type="submit" id="prijava" onclick="saveSchedule()">Prijavi se</button>
       </form>
 
     <div class="footer">

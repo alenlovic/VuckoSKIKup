@@ -232,7 +232,8 @@ header {
 
 /* table in competitors */
 
-.content-table {
+.content-table,
+.scheduleContent-table {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
@@ -243,7 +244,8 @@ header {
   background-color: rgb(183, 181, 181);
 }
 
-.content-table thead tr {
+.content-table thead tr,
+.scheduleContent-table thead tr {
   background-color: #009879;
   color: white;
   text-align: left;
@@ -251,19 +253,24 @@ header {
 }
 
 .content-table th,
-.content-table td {
+.scheduleContent-table th,
+.content-table td,
+.scheduleContent-table td {
   padding: 12px 15px;
 }
 
-.content-table tbody tr {
+.content-table tbody tr,
+.scheduleContent-table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
 
-.content-table tbody tr:nth-of-type(even) {
+.content-table tbody tr:nth-of-type(even),
+.scheduleContent-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
 
-.content-table tbody tr:last-of-type {
+.content-table tbody tr:last-of-type,
+.scheduleContent-table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
 }
 
@@ -272,7 +279,8 @@ header {
   display: flex;
 }
 
-.add-competitor {
+.add-competitor,
+.add-competitorOnSchedule {
   margin: 0 0 auto auto;
   width: auto;
   height: 40px;
@@ -454,7 +462,8 @@ label {
   margin-right: 10px;
 }
 
-input, select {
+input,
+select {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -472,4 +481,3 @@ button {
 button:hover {
   background-color: #0069d9;
 }
-

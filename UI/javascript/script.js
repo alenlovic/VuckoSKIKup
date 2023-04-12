@@ -50,19 +50,6 @@ function displayCompetitors(competitors) {
       return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> </tr>`);
     }
   });
-
-  //   competitors.forEach((competitor, index) => {
-  //     competitorElements += `
-  //             <tr class="competitor-list">
-  //                 <td>${competitor.id}</td>
-  //                 <td>${competitor.ime}</td>
-  //                 <td>${competitor.prezime}</td>
-  //                 <td>${competitor.nacionalnost}</td>
-  //                 <td>${competitor.disciplina}</td>
-  //                 <td>${competitor.godiste}</td>
-  //             </tr>
-  //         `;
-  //   });
 }
 function saveCompetitor() {
   addCompetitor(
@@ -77,16 +64,16 @@ function saveCompetitor() {
 
 getAllCompetitors();
 
-//disciplines.html
+//schedule.html
 
-const imeRaspored = document.querySelector("#ime");
-const prezimeRaspored = document.querySelector("#prezime");
-const redniBrojRaspored = document.querySelector("#redniBroj");
-const nacionalnostRaspored = document.querySelector("#nacionalnost");
-const disciplinaRaspored = document.querySelector("#disciplina");
-const stazaRaspored = document.querySelector("#staza");
-const kategorijaRaspored = document.querySelector("#kategorija");
-const prijavaRaspored = document.querySelector("#prijava");
+const imePrijava = document.querySelector("#ime");
+const prezimePrijava = document.querySelector("#prezime");
+const redniBrojPrijava = document.querySelector("#redniBroj");
+const nacionalnostPrijava = document.querySelector("#nacionalnost");
+const disciplinaPrijava = document.querySelector("#disciplina");
+const stazaPrijava = document.querySelector("#staza");
+const kategorijaPrijava = document.querySelector("#kategorija");
+const prijava = document.querySelector("#prijava");
 
 function addCompetitorOnSchedule(
   imePrijava,
@@ -118,18 +105,18 @@ function addCompetitorOnSchedule(
     .then((response) => console.log(response));
 }
 
-const scheduleTable = document.querySelector(""); //potrebno dodati query selec
+const scheduleTable = document.querySelector(".scheduleContent-table tbody");
 
 function getCompetitorsSchedule() {
   fetch("https://localhost:44382/api/raspored")
     .then((response) => response.json())
-    .then((data) => displayCompetitors(data));
+    .then((data) => displaySchedule(data));
 }
 
 function displaySchedule(schedules) {
   schedules.map((schedule, indx) => {
     if (scheduleTable) {
-      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> </tr>`);
+      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> </tr>`);
     }
   });
 }
@@ -147,6 +134,3 @@ function saveSchedule() {
 }
 
 getCompetitorsSchedule();
-
-
-

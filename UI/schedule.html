@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vučko SKI Kup Bjelašnica</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h2 class="logo">Vučko SKI Kup</h2>
-        <nav class="navigation">
-            <a href="index.html">Glavni meni</a>
-            <a href="disciplines.html">Discipline</a>
-            <a href="competitors.html">Takmičari</a>
-            <a href="schedule.html">Raspored</a>
-        </nav>
+      <h2 class="logo">Vučko SKI Kup</h2>
+      <nav class="navigation">
+        <a href="index.html">Glavni meni</a>
+        <a href="disciplines.html">Discipline</a>
+        <a href="competitors.html">Takmičari</a>
+        <a href="schedule.html">Raspored</a>
+      </nav>
     </header>
 
-    <div >
-        <div class="button-wrapper">
-          <button
-            class="add-competitor"
-            onclick="window.location.href='addschedule.html'"
-          >
-            <i class="fas fa-plus add-icon" aria-hidden="true"></i> Dodaj novu utrku
-          </button>
-        </div>
-        <div class="form-overflow">
-        <table class="content-table">
+    <div>
+      <div class="button-wrapper">
+        <button
+          class="add-competitorOnSchedule"
+          onclick="window.location.href='addschedule.html'"
+        >
+          <i class="fas fa-plus add-icon" aria-hidden="true"></i> Dodaj novu
+          utrku
+        </button>
+      </div>
+      <div class="form-overflow">
+        <table class="scheduleContent-table">
           <thead>
             <th>R. br.</th>
             <th>Ime</th>
@@ -42,18 +42,24 @@
           </thead>
           <tbody>
             <tr class="schedule-list" id="scheduleList"></tr>
-          </tbody class="tbodyschedule">
+          </tbody>
         </table>
       </div>
-      </div>
-
+    </div>
 
     <div class="footer">
-        <p>Alen Lović @ 2023</p>
-      </div>
+      <p>Alen Lović @ 2023</p>
+    </div>
 
-      <script src="javascript/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    <script src="javascript/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://kit.fontawesome.com/3cb9f76276.js"></script>
+  </body>
 </html>

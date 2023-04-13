@@ -18,49 +18,57 @@
       </nav>
     </header>
 
-    <form class="scheduleTable">
-      <div>
-        <label for="ime">Ime:</label>
-        <input type="text" id="ime" required />
+    <div>
+      <div class="button-wrapper">
+        <button class="returnToMain" id="returnToMain">
+          <i class="fa-regular fa-arrow-left"></i>
+          Nazad
+        </button>
       </div>
-      <div>
-        <label for="prezime">Prezime:</label>
-        <input type="text" id="prezime" required />
-      </div>
-      <div>
-        <label for="broj">Redni broj:</label>
-        <input type="text" id="redniBroj" required />
-      </div>
-      <div>
-        <label for="nacionalnost">Nacionalnost:</label>
-        <input type="text" id="nacionalnost" required />
-      </div>
-      <div>
-        <label for="disciplina">Disciplina:</label>
-        <input type="text" id="disciplina" required />
-      </div>
-      <div>
-        <label for="staza">Staza:</label>
-        <input type="text" id="staza" required />
-      </div>
-      <div>
-        <label for="kategorija">Kategorija:</label>
-        <select id="kategorija" required>
-          <option value="">Odaberite kategoriju</option>
-          <option value="Junior">Junior</option>
-          <option value="Senior">Senior</option>
-          <option value="Veteran">Veteran</option>
-        </select>
-      </div>
-      <button
-        type="submit"
-        id="prijava"
-        class="prijava"
-        onclick="saveSchedule()"
-      >
-        Prijavi se
-      </button>
-    </form>
+      <form class="scheduleTable">
+        <div>
+          <label for="ime">Ime:</label>
+          <input type="text" id="ime" required />
+        </div>
+        <div>
+          <label for="prezime">Prezime:</label>
+          <input type="text" id="prezime" required />
+        </div>
+        <div>
+          <label for="broj">Redni broj:</label>
+          <input type="text" id="redniBroj" required />
+        </div>
+        <div>
+          <label for="nacionalnost">Nacionalnost:</label>
+          <input type="text" id="nacionalnost" required />
+        </div>
+        <div>
+          <label for="disciplina">Disciplina:</label>
+          <input type="text" id="disciplina" required />
+        </div>
+        <div>
+          <label for="staza">Staza:</label>
+          <input type="text" id="staza" required />
+        </div>
+        <div>
+          <label for="kategorija">Kategorija:</label>
+          <select id="kategorija" required>
+            <option value="">Odaberite kategoriju</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
+            <option value="Veteran">Veteran</option>
+          </select>
+        </div>
+        <button
+          type="submit"
+          id="prijava"
+          class="prijava"
+          onclick="saveSchedule()"
+        >
+          Prijavi se
+        </button>
+      </form>
+    </div>
 
     <div class="footer">
       <p>Alen Lović @ 2023</p>
@@ -75,10 +83,18 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://kit.fontawesome.com/3cb9f76276.js"></script>
     <script>
       document.getElementById("prijava").addEventListener("click", function () {
-        window.open("schedule.html");
+        window.location.href = "schedule.html";
       });
+    </script>
+    <script>
+      document
+        .getElementById("returnToMain")
+        .addEventListener("click", function () {
+          window.location.href = "schedule.html";
+        });
     </script>
   </body>
 </html>

@@ -277,6 +277,7 @@ header {
 .button-wrapper {
   width: 100%;
   display: flex;
+  
 }
 
 .add-competitor,
@@ -412,7 +413,8 @@ header {
 
 .gender-category label,
 .gender-category input,
-.form-submit-btn .btnSave {
+.form-submit-btn .btnSave,
+.form-submit-btn .btnCancel {
   cursor: pointer;
 }
 
@@ -421,15 +423,27 @@ header {
 }
 
 .form-submit-btn .btnSave {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 49%;
   margin-top: 10px;
   font-size: 20px;
   padding: 10px;
   border: none;
   border-radius: 3px;
   color: #fff;
-  background: #162938;
+  background: #009879;
+}
+
+.form-submit-btn .btnCancel {
+  display: inline-block;
+  width: 49%;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background: red;
 }
 
 /* .form-submit-btn input:hover{
@@ -480,4 +494,16 @@ button {
 
 button:hover {
   background-color: #0069d9;
+}
+
+.returnToMain {
+  width: auto;
+  height: 40px;
+  background: #162938;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  padding: 0 10px;
 }

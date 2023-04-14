@@ -28,10 +28,59 @@ header {
   z-index: 99;
 }
 
+/* index.html */
+
 .logo {
   font-size: 2em;
   color: #fff;
   user-select: none;
+}
+
+.img-container {
+  position: absolute;
+  left: 0;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome-sign {
+  position: absolute;
+  top: 0;
+  margin-top: 8%;
+  font-family: Verdana, sans-serif;
+  color: white;
+}
+
+.text-container {
+  position: absolute;
+  right: 20%;
+  margin-top: 60px;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+  background-color: #009879;
+  color: white;
+  border-radius: 10px;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-top: -10px;
+}
+
+.description {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.signature {
+  font-size: 18px;
+  margin-top: 50px;
 }
 
 .navigation a {
@@ -412,7 +461,8 @@ header {
 
 .gender-category label,
 .gender-category input,
-.form-submit-btn .btnSave {
+.form-submit-btn .btnSave,
+.form-submit-btn .btnCancel {
   cursor: pointer;
 }
 
@@ -421,15 +471,27 @@ header {
 }
 
 .form-submit-btn .btnSave {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 49%;
   margin-top: 10px;
   font-size: 20px;
   padding: 10px;
   border: none;
   border-radius: 3px;
   color: #fff;
-  background: #162938;
+  background: #009879;
+}
+
+.form-submit-btn .btnCancel {
+  display: inline-block;
+  width: 49%;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background: red;
 }
 
 /* .form-submit-btn input:hover{
@@ -480,4 +542,16 @@ button {
 
 button:hover {
   background-color: #0069d9;
+}
+
+.returnToMain {
+  width: auto;
+  height: 40px;
+  background: #162938;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  padding: 0 10px;
 }

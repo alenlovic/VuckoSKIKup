@@ -134,3 +134,64 @@ function saveSchedule() {
 }
 
 getCompetitorsSchedule();
+
+/* 
+
+fetch('https://localhost:44382/api/takmicari', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      ime: ime,
+      prezime: prezime,
+      nacionalnost: nacionalnost,
+      disciplina: disciplina,
+      godiste: godiste,
+      redniBroj: redniBroj
+    })
+  })
+  .then(function(response) {
+    if (response.ok) {
+      // Ažurirajte UI nakon brisanja podataka iz baze
+      row.remove();
+      console.log('Podaci su uspešno obrisani iz baze.');
+    } else {
+      console.log('Došlo je do greške prilikom brisanja podataka iz baze.');
+    }
+  })
+  .catch(function(error) {
+    console.error('Došlo je do greške prilikom brisanja podataka iz baze:', error);
+  });
+}
+
+fetch('https://localhost:44382/api/raspored', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+    imePrijava: imePrijava,
+    prezimePrijava: prezimePrijava,
+    redniBrojPrijava: redniBrojPrijava,
+    nacionalnostPrijava: nacionalnostPrijava,
+    disciplinaPrijava: disciplinaPrijava,
+    stazaPrijava: stazaPrijava,
+    kategorijaPrijava: kategorijaPrijava,
+    })
+  })
+  .then(function(response) {
+    if (response.ok) {
+      // Ažurirajte UI nakon brisanja podataka iz baze
+      row.remove();
+      console.log('Podaci su uspešno obrisani iz baze.');
+    } else {
+      console.log('Došlo je do greške prilikom brisanja podataka iz baze.');
+    }
+  })
+  .catch(function(error) {
+    console.error('Došlo je do greške prilikom brisanja podataka iz baze:', error);
+  });
+}
+
+*/

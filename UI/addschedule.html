@@ -25,7 +25,7 @@
           Nazad
         </button>
       </div>
-      <form class="scheduleTable">
+      <form class="scheduleTable" id="scheduleTable">
         <div>
           <label for="ime">Ime:</label>
           <input type="text" id="ime" required />
@@ -60,10 +60,9 @@
           </select>
         </div>
         <button
-          type="submit"
+        onclick="saveSchedule()"
           id="prijava"
           class="prijava"
-          onclick="saveSchedule()"
         >
           Prijavi se
         </button>
@@ -80,7 +79,7 @@
         window.location.href = "schedule.html";
       });
     </script> -->
-    <script>
+   <script>
       document
         .getElementById("returnToMain")
         .addEventListener("click", function () {

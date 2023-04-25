@@ -48,7 +48,7 @@ function getAllCompetitors() {
 function displayCompetitors(competitors) {
   competitors.map((competitor, indx) => {
     if (competitorsTable) {
-      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="updateCompetitor(${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id})">Izbrisi</button></td></tr>`);
+      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="updateCompetitor(${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); window.location.reload()">Izbrisi</button></td></tr>`);
     }
   });
 }
@@ -118,7 +118,7 @@ function getCompetitorsSchedule() {
 function displaySchedule(schedules) {
   schedules.map((schedule, indx) => {
     if (scheduleTable) {
-      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="editCompetitor(${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id})">Izbrisi</button></td> </tr>`);
+      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="editCompetitor(${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id}); window.location.reload()">Izbrisi</button></td> </tr>`);
     }
   });
 }

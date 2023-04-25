@@ -65,7 +65,7 @@ img {
   text-align: center;
   background-color: #009879;
   color: white;
-  border-radius: 10px;
+  border: double rgb(53, 94, 65) 5px;
 }
 
 .subtitle {

@@ -501,7 +501,7 @@ img {
 
 /* style za addschedule.html */
 
-form {
+.formschedule {
   display: flex;
   flex-direction: column;
   align-items: center;

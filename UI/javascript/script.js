@@ -185,7 +185,37 @@ const deleteSchedule = (id) => {
     });
 };
 
+//put request
+
 const editCompetitor = (id) => {
   window.location.href = `schedule.html?id=${id}&name=${id}`;
 };
 
+const url = "https://localhost:44382/api/takmicari";
+
+const data = {
+    ime: ime,
+    prezime: prezime,
+    nacionalnost: nacionalnost,
+    disciplina: disciplina,
+    godiste: godiste,
+    redniBroj: redniBroj
+};
+
+const updateCompetitor = (id) => {
+fetch(url, {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error("HTTP error " + response.status);
+  }
+})
+.catch(error => {
+  // Handle any errors that occurred during the request
+});
+};

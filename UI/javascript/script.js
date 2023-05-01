@@ -6,6 +6,7 @@ const godisteInput = document.querySelector("#yearOfBirth");
 const redniBrojInput = document.querySelector("#ordinalNumber");
 const saveButton = document.querySelector("#btnSave");
 
+const url = "https://localhost:44382/api/takmicari";
 //competitors.html
 
 function addCompetitor(
@@ -25,7 +26,7 @@ function addCompetitor(
     redniBroj: redniBroj,
   };
 
-  fetch("https://localhost:44382/api/takmicari", {
+  fetch(url, {
     method: "POST",
     body: JSON.stringify(body),
     headers: {
@@ -48,10 +49,15 @@ function getAllCompetitors() {
 function displayCompetitors(competitors) {
   competitors.map((competitor, indx) => {
     if (competitorsTable) {
-      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="updateCompetitor(${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); window.location.reload()">Izbrisi</button></td></tr>`);
+      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="navigateTo('updatecompetitor.html', ${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); window.location.reload()">Izbrisi</button></td></tr>`);
     }
   });
 }
+
+const navigateTo = (route, id) => {
+  window.location.href = route + `?id=${id}`;
+};
+
 function saveCompetitor() {
   addCompetitor(
     imeInput.value,
@@ -191,31 +197,13 @@ const editCompetitor = (id) => {
   window.location.href = `schedule.html?id=${id}&name=${id}`;
 };
 
-const url = "https://localhost:44382/api/takmicari";
-
 const data = {
-    ime: ime,
-    prezime: prezime,
-    nacionalnost: nacionalnost,
-    disciplina: disciplina,
-    godiste: godiste,
-    redniBroj: redniBroj
+  ime: imeInput,
+  prezime: prezimeInput,
+  nacionalnost: nacionalnostInput,
+  disciplina: disciplinaInput,
+  godiste: godisteInput,
+  redniBroj: redniBrojInput,
 };
 
-const updateCompetitor = (id) => {
-fetch(url, {
-  method: "PUT",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(data)
-})
-.then(response => {
-  if (!response.ok) {
-    throw new Error("HTTP error " + response.status);
-  }
-})
-.catch(error => {
-  // Handle any errors that occurred during the request
-});
-};
+

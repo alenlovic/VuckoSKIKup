@@ -18,67 +18,73 @@
       </nav>
     </header>
 
-    <div>
-      <div class="button-wrapper">
-        <button class="returnToMain" id="returnToMain">
-          <i class="fa-regular fa-arrow-left"></i>
-          Nazad
-        </button>
+    <div class="container">
+      <h1 class="form-title">Unesi novog takmičara u sistem</h1>
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <label>Ime</label>
+          <input type="text" id="ime" placeholder="Ime" />
+        </div>
+        <div class="user-input-box">
+          <label>Prezime</label>
+          <input type="text" id="prezime" placeholder="Prezime" />
+        </div>
+        <div class="user-input-box">
+          <label>Nacionalnost</label>
+          <input type="text" id="nacionalnost" placeholder="Nacionalnost" />
+        </div>
+        <div class="user-input-box">
+          <label>Disciplina</label>
+          <input type="text" id="disciplina" placeholder="Disciplina" />
+        </div>
+        <div class="user-input-box">
+          <label>Godište</label>
+          <input type="text" id="godiste" placeholder="Godište" />
+        </div>
+        <div class="user-input-box">
+          <label>Redni broj</label>
+          <input type="text" id="redniBroj" placeholder="Redni broj" />
+        </div>
       </div>
-      <div class="scheduleTable formschedule" id="scheduleTable">
-        <div>
-          <label for="ime">Ime:</label>
-          <input type="text" id="ime" required />
+      <div class="gender-details-box">
+        <span class="gender-title">Spol</span>
+        <div class="gender-category">
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Muško</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Žensko</label>
         </div>
-        <div>
-          <label for="prezime">Prezime:</label>
-          <input type="text" id="prezime" required />
-        </div>
-        <div>
-          <label for="broj">Redni broj:</label>
-          <input type="text" id="redniBroj" required />
-        </div>
-        <div>
-          <label for="nacionalnost">Nacionalnost:</label>
-          <input type="text" id="nacionalnost" required />
-        </div>
-        <div>
-          <label for="disciplina">Disciplina:</label>
-          <input type="text" id="disciplina" required />
-        </div>
-        <div>
-          <label for="staza">Staza:</label>
-          <input type="text" id="staza" required />
-        </div>
-        <div>
-          <label for="kategorija">Kategorija:</label>
-          <select id="kategorija" required>
-            <option value="">Odaberite kategoriju</option>
-            <option value="Junior">Junior</option>
-            <option value="Senior">Senior</option>
-            <option value="Veteran">Veteran</option>
-          </select>
-        </div>
+      </div>
+      <div class="form-submit-btn">
         <button
-        onclick="saveSchedule()"
-          id="prijava"
-          class="prijava"
+          onclick="updateCompetitor()"
+          class="btnSave register-link"
+          id="btnSave"
         >
-          Prijavi se
+          Spasi
         </button>
+        <button class="btnCancel" id="btnCancel">Poništi</button>
       </div>
     </div>
 
     <div class="footer">
       <p>Alen Lović @ 2023</p>
     </div>
-
     <script src="javascript/script.js"></script>
-   <script>
+    <script src="javascript/updatecompetitor.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
       document
-        .getElementById("returnToMain")
+        .getElementById("btnCancel")
         .addEventListener("click", function () {
-          window.location.href = "schedule.html";
+          window.location.href = "index.html";
         });
     </script>
   </body>

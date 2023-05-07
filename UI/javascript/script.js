@@ -193,7 +193,7 @@ fetch('https://localhost:44382/api/raspored', {
     })
     .catch(function (error) {
       console.error(
-        "Došlo je do greške prilikom brisanja podataka iz baze:",
+        "Došlo je do greške prilikom brisanja podataka iz bazee:",
         error
       );
     });

@@ -36,7 +36,8 @@ function addCompetitor(
     },
   })
     .then((data) => data.json())
-    .then((response) => console.log(response));
+    .then((response) => console.log(response))
+    .then(() => (window.location.href = "competitors.html"));
 }
 
 const competitorsTable = document.querySelector(".content-table tbody");
@@ -110,7 +111,8 @@ function addCompetitorOnSchedule(
     },
   })
     .then((data) => data.json())
-    .then((response) => console.log(response));
+    .then((response) => console.log(response))
+    .then(() => (window.location.href = "schedule.html"));
 }
 
 const scheduleTable = document.querySelector(".scheduleContent-table tbody");
@@ -143,12 +145,11 @@ function saveSchedule() {
 
 getCompetitorsSchedule();
 
-/* 
-
-fetch('https://localhost:44382/api/takmicari', {
-    method: 'DELETE',
+const deleteCompetitor = (id) => {
+  fetch(`https://localhost:44382/api/takmicari/${id}`, {
+    method: "DELETE",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
   })
     .then(function (response) {
@@ -161,25 +162,19 @@ fetch('https://localhost:44382/api/takmicari', {
         console.error("Došlo je do greške prilikom brisanja podataka iz baze.");
       }
     })
-  })
-  .then(function(response) {
-    if (response.ok) {
-      // Ažurirajte UI nakon brisanja podataka iz baze
-      row.remove();
-      console.log('Podaci su uspešno obrisani iz baze.');
-    } else {
-      console.log('Došlo je do greške prilikom brisanja podataka iz baze.');
-    }
-  })
-  .catch(function(error) {
-    console.error('Došlo je do greške prilikom brisanja podataka iz baze:', error);
-  });
-}
+    .catch(function (error) {
+      console.error(
+        "Došlo je do greške prilikom brisanja podataka iz baze:",
+        error
+      );
+    });
+};
 
-fetch('https://localhost:44382/api/raspored', {
-    method: 'DELETE',
+const deleteSchedule = (id) => {
+  fetch(`https://localhost:44382/api/raspored/${id}`, {
+    method: "DELETE",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
   })
     .then(function (response) {

@@ -33,8 +33,7 @@ function addCompetitor(
     },
   })
     .then((data) => data.json())
-    .then((response) => console.log(response))
-    .then(() => (window.location.href = "competitors.html"));
+    .then((response) => console.log(response));
 }
 
 const competitorsTable = document.querySelector(".content-table tbody");
@@ -48,7 +47,7 @@ function getAllCompetitors() {
 function displayCompetitors(competitors) {
   competitors.map((competitor, indx) => {
     if (competitorsTable) {
-      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="updateCompetitor(${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); window.location.reload()">Izbrisi</button></td></tr>`);
+      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> </tr>`);
     }
   });
 }
@@ -103,8 +102,7 @@ function addCompetitorOnSchedule(
     },
   })
     .then((data) => data.json())
-    .then((response) => console.log(response))
-    .then(() => (window.location.href = "schedule.html"));
+    .then((response) => console.log(response));
 }
 
 const scheduleTable = document.querySelector(".scheduleContent-table tbody");
@@ -118,7 +116,7 @@ function getCompetitorsSchedule() {
 function displaySchedule(schedules) {
   schedules.map((schedule, indx) => {
     if (scheduleTable) {
-      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="editCompetitor(${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id}); window.location.reload()">Izbrisi</button></td> </tr>`);
+      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> </tr>`);
     }
   });
 }
@@ -137,55 +135,63 @@ function saveSchedule() {
 
 getCompetitorsSchedule();
 
-const deleteCompetitor = (id) => {
-  fetch(`https://localhost:44382/api/takmicari/${id}`, {
-    method: "DELETE",
+/* 
+
+fetch('https://localhost:44382/api/takmicari', {
+    method: 'DELETE',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json'
     },
-  })
-    .then(function (response) {
-      if (response.ok) {
-        //Ažurirajte UI nakon brisanja podataka iz baze
-        row.remove();
-        console.log("Podaci su uspešno obrisani iz baze.");
-      } else {
-        console.error("Došlo je do greške prilikom brisanja podataka iz baze.");
-      }
+    body: JSON.stringify({
+      ime: ime,
+      prezime: prezime,
+      nacionalnost: nacionalnost,
+      disciplina: disciplina,
+      godiste: godiste,
+      redniBroj: redniBroj
     })
-    .catch(function (error) {
-      console.error(
-        "Došlo je do greške prilikom brisanja podataka iz baze:",
-        error
-      );
-    });
-};
+  })
+  .then(function(response) {
+    if (response.ok) {
+      // Ažurirajte UI nakon brisanja podataka iz baze
+      row.remove();
+      console.log('Podaci su uspešno obrisani iz baze.');
+    } else {
+      console.log('Došlo je do greške prilikom brisanja podataka iz baze.');
+    }
+  })
+  .catch(function(error) {
+    console.error('Došlo je do greške prilikom brisanja podataka iz baze:', error);
+  });
+}
 
-const deleteSchedule = (id) => {
-  fetch(`https://localhost:44382/api/raspored/${id}`, {
-    method: "DELETE",
+fetch('https://localhost:44382/api/raspored', {
+    method: 'DELETE',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json'
     },
-  })
-    .then(function (response) {
-      if (response.ok) {
-        //Ažurirajte UI nakon brisanja podataka iz baze
-        row.remove();
-        console.log("Podaci su uspešno obrisani iz baze.");
-      } else {
-        console.error("Došlo je do greške prilikom brisanja podataka iz baze.");
-      }
+    body: JSON.stringify({
+    imePrijava: imePrijava,
+    prezimePrijava: prezimePrijava,
+    redniBrojPrijava: redniBrojPrijava,
+    nacionalnostPrijava: nacionalnostPrijava,
+    disciplinaPrijava: disciplinaPrijava,
+    stazaPrijava: stazaPrijava,
+    kategorijaPrijava: kategorijaPrijava,
     })
-    .catch(function (error) {
-      console.error(
-        "Došlo je do greške prilikom brisanja podataka iz baze:",
-        error
-      );
-    });
-};
+  })
+  .then(function(response) {
+    if (response.ok) {
+      // Ažurirajte UI nakon brisanja podataka iz baze
+      row.remove();
+      console.log('Podaci su uspešno obrisani iz baze.');
+    } else {
+      console.log('Došlo je do greške prilikom brisanja podataka iz baze.');
+    }
+  })
+  .catch(function(error) {
+    console.error('Došlo je do greške prilikom brisanja podataka iz baze:', error);
+  });
+}
 
-const editCompetitor = (id) => {
-  window.location.href = `schedule.html?id=${id}&name=${id}`;
-};
-
+*/

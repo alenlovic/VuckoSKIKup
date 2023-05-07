@@ -12,5 +12,6 @@ namespace VuckoSKIKup.Models
         public string Disciplina { get; set; }
         public int Godiste { get; set; }
         public int RedniBroj { get; set; }  
+
     }
 }

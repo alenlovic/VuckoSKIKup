@@ -63,9 +63,12 @@ img {
   max-width: 600px;
   padding: 20px;
   text-align: center;
-  background-color: #009879;
+  width: 100%;
+  max-width: 650px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
   color: white;
-  border: double rgb(53, 94, 65) 5px;
+  
 }
 
 .subtitle {
@@ -295,7 +298,7 @@ img {
 
 .content-table thead tr,
 .scheduleContent-table thead tr {
-  background-color: #009879;
+  background-color: #007bff;
   color: white;
   text-align: left;
   font-weight: bold;
@@ -320,7 +323,7 @@ img {
 
 .content-table tbody tr:last-of-type,
 .scheduleContent-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  border-bottom: 2px solid #007bff;
 }
 
 .button-wrapper {
@@ -554,4 +557,22 @@ button:hover {
   cursor: pointer;
   color: #fff;
   padding: 0 10px;
+}
+
+/* about us */
+
+.info-about-us {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 28px;
+  margin: 0 28px;
+  border-radius: 10px;
+  color: white;
+}
+
+.header-about-us {
+  text-align: center;
+  border-bottom: #f3f3f3 solid 1px;
+  margin-bottom: 10px;
 }

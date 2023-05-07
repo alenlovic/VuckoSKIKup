@@ -124,11 +124,7 @@ function getCompetitorsSchedule() {
 function displaySchedule(schedules) {
   schedules.map((schedule, indx) => {
     if (scheduleTable) {
-<<<<<<< HEAD
-      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> </tr>`);
-=======
       return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="navigateTo('updateschedule.html', ${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id}); ">Izbrisi</button></td> </tr>`);
->>>>>>> 24fd672e62b79edb4ab90c5594ca8b1b9cc55c51
     }
   });
 }
@@ -154,15 +150,6 @@ fetch('https://localhost:44382/api/takmicari', {
     headers: {
       'Content-Type': 'application/json'
     },
-<<<<<<< HEAD
-    body: JSON.stringify({
-      ime: ime,
-      prezime: prezime,
-      nacionalnost: nacionalnost,
-      disciplina: disciplina,
-      godiste: godiste,
-      redniBroj: redniBroj
-=======
   })
     .then(function (response) {
       if (response.ok) {
@@ -173,7 +160,6 @@ fetch('https://localhost:44382/api/takmicari', {
       } else {
         console.error("Došlo je do greške prilikom brisanja podataka iz baze.");
       }
->>>>>>> 24fd672e62b79edb4ab90c5594ca8b1b9cc55c51
     })
   })
   .then(function(response) {
@@ -195,33 +181,6 @@ fetch('https://localhost:44382/api/raspored', {
     headers: {
       'Content-Type': 'application/json'
     },
-<<<<<<< HEAD
-    body: JSON.stringify({
-    imePrijava: imePrijava,
-    prezimePrijava: prezimePrijava,
-    redniBrojPrijava: redniBrojPrijava,
-    nacionalnostPrijava: nacionalnostPrijava,
-    disciplinaPrijava: disciplinaPrijava,
-    stazaPrijava: stazaPrijava,
-    kategorijaPrijava: kategorijaPrijava,
-    })
-  })
-  .then(function(response) {
-    if (response.ok) {
-      // Ažurirajte UI nakon brisanja podataka iz baze
-      row.remove();
-      console.log('Podaci su uspešno obrisani iz baze.');
-    } else {
-      console.log('Došlo je do greške prilikom brisanja podataka iz baze.');
-    }
-  })
-  .catch(function(error) {
-    console.error('Došlo je do greške prilikom brisanja podataka iz baze:', error);
-  });
-}
-
-*/
-=======
   })
     .then(function (response) {
       if (response.ok) {
@@ -260,4 +219,3 @@ const data = {
 
 
 
->>>>>>> 24fd672e62b79edb4ab90c5594ca8b1b9cc55c51

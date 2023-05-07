@@ -70,6 +70,7 @@ const updateCompetitor = () => {
       if (!response.ok) {
         throw new Error("HTTP error " + response.status);
       }
+      window.location.href = "competitors.html";
     })
     .catch((error) => {
       // Handle any errors that occurred during the request

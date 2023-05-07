@@ -37,7 +37,7 @@ function addCompetitor(
   })
     .then((data) => data.json())
     .then((response) => console.log(response))
-    .then(() => (window.location.href = "competitors.html"));
+    .then(() => (window.location.href = "../view/competitors.html"));
 }
 
 const competitorsTable = document.querySelector(".content-table tbody");
@@ -51,7 +51,7 @@ function getAllCompetitors() {
 function displayCompetitors(competitors) {
   competitors.map((competitor, indx) => {
     if (competitorsTable) {
-      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="navigateTo('updatecompetitor.html', ${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); ">Izbrisi</button></td></tr>`);
+      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="navigateTo('../view/updatecompetitor.html', ${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); ">Izbrisi</button></td></tr>`);
     }
   });
 }
@@ -112,7 +112,7 @@ function addCompetitorOnSchedule(
   })
     .then((data) => data.json())
     .then((response) => console.log(response))
-    .then(() => (window.location.href = "schedule.html"));
+    .then(() => (window.location.href = "../view/schedule.html"));
 }
 
 const scheduleTable = document.querySelector(".scheduleContent-table tbody");
@@ -126,7 +126,7 @@ function getCompetitorsSchedule() {
 function displaySchedule(schedules) {
   schedules.map((schedule, indx) => {
     if (scheduleTable) {
-      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="navigateTo('updateschedule.html', ${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id}); ">Izbrisi</button></td> </tr>`);
+      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="navigateTo('../view/updateschedule.html', ${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id}); ">Izbrisi</button></td> </tr>`);
     }
   });
 }
@@ -154,7 +154,6 @@ const deleteCompetitor = (id) => {
   })
     .then(function (response) {
       if (response.ok) {
-        //Ažurirajte UI nakon brisanja podataka iz baze
         console.log("Podaci su uspešno obrisani iz baze.");
         window.location.reload();
 
@@ -179,7 +178,6 @@ const deleteSchedule = (id) => {
   })
     .then(function (response) {
       if (response.ok) {
-        //Ažurirajte UI nakon brisanja podataka iz baze
         window.location.reload();
         console.log("Podaci su uspešno obrisani iz baze.");
       } else {
@@ -193,12 +191,6 @@ const deleteSchedule = (id) => {
       );
     });
 };
-
-//put request
-
-/* const editCompetitor = (id) => {
-  window.location.href = `schedule.html?id=${id}&name=${id}`;
-}; */
 
 const data = {
   ime: imeInput,

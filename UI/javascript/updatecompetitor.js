@@ -2,7 +2,7 @@ var queryParams = [];
 const params = new URLSearchParams(window.location.search);
 
 for (const param of params) {
-  queryParams.push({ [param[0]]: param[1] }); //Ukoliko je dinamicka vrijednost atributa unutar objekta koristiti sljedecu sintaksu: { [ime varijable] : vrijednost }
+  queryParams.push({ [param[0]]: param[1] }); 
 }
 
 const getParamByName = (queryParam) => {
@@ -70,7 +70,7 @@ const updateCompetitor = () => {
       if (!response.ok) {
         throw new Error("HTTP error " + response.status);
       }
-      window.location.href = "competitors.html";
+      window.location.href = "../view/competitors.html";
     })
     .catch((error) => {
       // Handle any errors that occurred during the request

@@ -10,7 +10,52 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("images/6.jpg") no-repeat;
+}
+
+.index-html {
+  background: url("../images/6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutus-html {
+  background: url("../images/6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.addnewcompetitor-html {
+  background: url("../images/6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.addschedule-html {
+  background: url("../images/6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.competitors-html {
+  background: url("../images/6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.schedule-html {
+  background: url("../images/6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.updatecompetitor-html {
+  background: url("../images/6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.updateschedule-html {
+  background: url("../images/6.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }

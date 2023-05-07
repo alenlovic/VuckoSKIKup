@@ -188,7 +188,7 @@ const deleteSchedule = (id) => {
     })
     .catch(function (error) {
       console.error(
-        "Došlo je do greške prilikom brisanja podataka iz baze:",
+        "Došlo je do greške prilikom brisanja podataka iz bazee:",
         error
       );
     });

@@ -28,31 +28,31 @@
       <div class="scheduleTable formschedule" id="scheduleTable">
         <div>
           <label for="ime">Ime:</label>
-          <input type="text" id="imePrijava" required />
+          <input type="text" id="ime" required />
         </div>
         <div>
           <label for="prezime">Prezime:</label>
-          <input type="text" id="prezimePrijava" required />
+          <input type="text" id="prezime" required />
         </div>
         <div>
           <label for="broj">Redni broj:</label>
-          <input type="text" id="redniBrojPrijava" required />
-        </div>
-        <div>
-          <label for="nacionalnost">Nacionalnost:</label>
-          <input type="text" id="nacionalnostPrijava" required />
+          <input type="text" id="redniBroj" required />
         </div>
         <div>
           <label for="disciplina">Disciplina:</label>
-          <input type="text" id="disciplinaPrijava" required />
+          <input type="text" id="disciplina" required />
         </div>
         <div>
           <label for="staza">Staza:</label>
-          <input type="text" id="stazaPrijava" required />
+          <input type="text" id="staza" required />
+        </div>
+        <div>
+          <label for="vrijemeTrke">Vrijeme Trke:</label>
+          <input type="text" id="vrijemeTrke" required />
         </div>
         <div>
           <label for="kategorija">Kategorija:</label>
-          <select id="kategorijaPrijava" required>
+          <select id="kategorija" required>
             <option value="">Odaberite kategoriju</option>
             <option value="Junior">Junior</option>
             <option value="Senior">Senior</option>
@@ -60,7 +60,7 @@
           </select>
         </div>
         <button
-        onclick="updateSchedule()"
+        onclick="saveSchedule()"
           id="prijava"
           class="prijava"
         >

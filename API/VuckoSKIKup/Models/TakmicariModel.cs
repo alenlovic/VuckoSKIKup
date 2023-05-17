@@ -8,10 +8,9 @@ namespace VuckoSKIKup.Models
         public int ID { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string Nacionalnost { get; set; }
-        public string Disciplina { get; set; }
         public int Godiste { get; set; }
-        public int RedniBroj { get; set; }  
-
+        public string ZemljaPorijekla { get; set; }
+        public string BrojTelefona { get; set; }
+        public string Email { get; set; }
     }
 }

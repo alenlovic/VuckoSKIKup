@@ -19,9 +19,9 @@ const getParamByName = (queryParam) => {
 const imePrijavaSchedule = document.querySelector("#imePrijava");
 const prezimePrijavaSchedule = document.querySelector("#prezimePrijava");
 const redniBrojPrijavaSchedule = document.querySelector("#redniBrojPrijava");
-const nacionalnostPrijavaSchedule = document.querySelector("#nacionalnostPrijava");
 const disciplinaPrijavaSchedule = document.querySelector("#disciplinaPrijava");
 const stazaPrijavaSchedule = document.querySelector("#stazaPrijava");
+const vrijemeTrkePrijavaSchedule = document.querySelector("#vrijemeTrkePrijava");
 const kategorijaPrijavaSchedule = document.querySelector("#kategorijaPrijava");
 
 const id = getParamByName("id");
@@ -55,9 +55,9 @@ const updateSchedule = () => {
     imePrijava: imePrijavaSchedule.value,
     prezimePrijava: prezimePrijavaSchedule.value,
     redniBrojPrijava: redniBrojPrijavaSchedule.value,
-    nacionalnostPrijava: nacionalnostPrijavaSchedule.value,
     disciplinaPrijava: disciplinaPrijavaSchedule.value,
     stazaPrijava: stazaPrijavaSchedule.value,
+    vrijemeTrkePrijava: vrijemeTrkePrijavaSchedule.value,
     kategorijaPrijava: kategorijaPrijavaSchedule.value,
   };
   fetch(`${urlSchedule}/${id}`, {

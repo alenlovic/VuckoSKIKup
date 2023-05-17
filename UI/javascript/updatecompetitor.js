@@ -18,10 +18,11 @@ const getParamByName = (queryParam) => {
 
 let imeInputEdit = document.querySelector("#ime");
 let prezimeInputEdit = document.querySelector("#prezime");
-let nacionalnostInputEdit = document.querySelector("#nacionalnost");
-let disciplinaInputEdit = document.querySelector("#disciplina");
 let godisteInputEdit = document.querySelector("#godiste");
-let redniBrojInputEdit = document.querySelector("#redniBroj");
+let zemljaPorijeklaInputEdit = document.querySelector("#zemljaPorijekla");
+let brojTelefonaInputEdit = document.querySelector("#brojTelefona"); //
+let emailInputEdit = document.querySelector("#email"); //
+
 
 const id = getParamByName("id");
 
@@ -53,11 +54,10 @@ const updateCompetitor = () => {
     id: id,
     ime: imeInputEdit.value,
     prezime: prezimeInputEdit.value,
-    nacionalnost: nacionalnostInputEdit.value,
-    disciplina: disciplinaInputEdit.value,
     godiste: godisteInputEdit.value,
-    redniBroj: redniBrojInputEdit.value,
-    spol: "Test"
+    zemljaPorijekla: zemljaPorijeklaInputEdit.value,
+    brojTelefona: brojTelefonaInputEdit.value,
+    email: emailInputEdit.value,
   };
   fetch(`${url}/${id}`, {
     method: "PUT",

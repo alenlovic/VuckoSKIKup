@@ -1,9 +1,9 @@
-const imeInput = document.querySelector("#firstName");
-const prezimeInput = document.querySelector("#lastName");
-const nacionalnostInput = document.querySelector("#nationality");
-const disciplinaInput = document.querySelector("#discipline");
-const godisteInput = document.querySelector("#yearOfBirth");
-const redniBrojInput = document.querySelector("#ordinalNumber");
+const imeInput = document.querySelector("#ime");
+const prezimeInput = document.querySelector("#prezime");
+const godisteInput = document.querySelector("#godiste");
+const zemljaPorijeklaInput = document.querySelector("#zemljaPorijekla");
+const brojTelefonaInput = document.querySelector("#brojTelefona");
+const emailInput = document.querySelector("#email");
 const saveButton = document.querySelector("#btnSave");
 
 const url = "https://localhost:44382/api/takmicari";
@@ -11,21 +11,22 @@ const urlSchedule = "https://localhost:44382/api/raspored";
 
 //competitors.html
 
+//veze se za competitora
 function addCompetitor(
   ime,
   prezime,
-  nacionalnost,
-  disciplina,
   godiste,
-  redniBroj
+  zemljaPorijekla,
+  brojTelefona,
+  email
 ) {
   const body = {
     ime: ime,
     prezime: prezime,
-    nacionalnost: nacionalnost,
-    disciplina: disciplina,
     godiste: godiste,
-    redniBroj: redniBroj,
+    zemljaPorijekla: zemljaPorijekla,
+    brojTelefona: brojTelefona,
+    email: email,
   };
 
   fetch(url, {
@@ -51,7 +52,7 @@ function getAllCompetitors() {
 function displayCompetitors(competitors) {
   competitors.map((competitor, indx) => {
     if (competitorsTable) {
-      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.nacionalnost}</td> <td>${competitor.disciplina}</td> <td>${competitor.godiste}</td> <td>${competitor.redniBroj}</td> <td><button onClick="navigateTo('../view/updatecompetitor.html', ${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); ">Izbrisi</button></td></tr>`);
+      return (competitorsTable.innerHTML += `<tr class='competitor-list'> <td>${competitor.id}</td> <td>${competitor.ime}</td><td>${competitor.prezime}</td> <td>${competitor.godiste}</td> <td>${competitor.zemljaPorijekla}</td> <td>${competitor.brojTelefona}</td> <td>${competitor.email}</td><td><button onClick="navigateTo('../view/updatecompetitor.html', ${competitor.id})">Uredi</button></td>  <td><button onClick="deleteCompetitor(${competitor.id}); ">Izbrisi</button></td></tr>`);
     }
   });
 }
@@ -64,10 +65,10 @@ function saveCompetitor() {
   addCompetitor(
     imeInput.value,
     prezimeInput.value,
-    nacionalnostInput.value,
-    disciplinaInput.value,
     godisteInput.value,
-    redniBrojInput.value
+    zemljaPorijeklaInput.value,
+    brojTelefonaInput.value,
+    emailInput.value
   );
 }
 
@@ -75,31 +76,31 @@ getAllCompetitors();
 
 //schedule.html
 
-const imePrijava = document.querySelector("#ime");
-const prezimePrijava = document.querySelector("#prezime");
-const redniBrojPrijava = document.querySelector("#redniBroj");
-const nacionalnostPrijava = document.querySelector("#nacionalnost");
-const disciplinaPrijava = document.querySelector("#disciplina");
-const stazaPrijava = document.querySelector("#staza");
-const kategorijaPrijava = document.querySelector("#kategorija");
+const imePrijava = document.querySelector("#imePrijava");
+const prezimePrijava = document.querySelector("#prezimePrijava");
+const redniBrojPrijava = document.querySelector("#redniBrojPrijava");
+const disciplinaPrijava = document.querySelector("#disciplinaPrijava");
+const stazaPrijava = document.querySelector("#stazaPrijava");
+const vrijemeTrkePrijava = document.querySelector("#vrijemeTrkePrijava");
+const kategorijaPrijava = document.querySelector("#kategorijaPrijava");
 const prijava = document.querySelector("#prijava");
 
 function addCompetitorOnSchedule(
   imePrijava,
   prezimePrijava,
   redniBrojPrijava,
-  nacionalnostPrijava,
   disciplinaPrijava,
   stazaPrijava,
+  vrijemeTrkePrijava,
   kategorijaPrijava
 ) {
   const body = {
     imePrijava: imePrijava,
     prezimePrijava: prezimePrijava,
     redniBrojPrijava: redniBrojPrijava,
-    nacionalnostPrijava: nacionalnostPrijava,
     disciplinaPrijava: disciplinaPrijava,
     stazaPrijava: stazaPrijava,
+    vrijemeTrkePrijava: vrijemeTrkePrijava,
     kategorijaPrijava: kategorijaPrijava,
   };
 
@@ -126,7 +127,7 @@ function getCompetitorsSchedule() {
 function displaySchedule(schedules) {
   schedules.map((schedule, indx) => {
     if (scheduleTable) {
-      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.nacionalnostPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="navigateTo('../view/updateschedule.html', ${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id}); ">Izbrisi</button></td> </tr>`);
+      return (scheduleTable.innerHTML += `<tr class='schedule-list'> <td>${schedule.id}</td> <td>${schedule.imePrijava}</td> <td>${schedule.prezimePrijava}</td><td>${schedule.redniBrojPrijava}</td> <td>${schedule.disciplinaPrijava}</td> <td>${schedule.stazaPrijava}</td> <td>${schedule.vrijemeTrkePrijava}</td> <td>${schedule.kategorijaPrijava}</td> <td><button onClick="navigateTo('../view/updateschedule.html', ${schedule.id})">Uredi</button></td>  <td><button onClick="deleteSchedule(${schedule.id}); ">Izbrisi</button></td> </tr>`);
     }
   });
 }
@@ -136,9 +137,9 @@ function saveSchedule() {
     imePrijava.value,
     prezimePrijava.value,
     redniBrojPrijava.value,
-    nacionalnostPrijava.value,
     disciplinaPrijava.value,
     stazaPrijava.value,
+    vrijemeTrkePrijava.value,
     kategorijaPrijava.value
   );
 }
@@ -156,7 +157,6 @@ const deleteCompetitor = (id) => {
       if (response.ok) {
         console.log("Podaci su uspešno obrisani iz baze.");
         window.location.reload();
-
       } else {
         console.error("Došlo je do greške prilikom brisanja podataka iz baze.");
       }
@@ -195,14 +195,8 @@ const deleteSchedule = (id) => {
 const data = {
   ime: imeInput,
   prezime: prezimeInput,
-  nacionalnost: nacionalnostInput,
-  disciplina: disciplinaInput,
   godiste: godisteInput,
-  redniBroj: redniBrojInput,
+  zemljaPorijekla: zemljaPorijeklaInput,
+  brojTelefona: brojTelefonaInput,
+  email: emailInput
 };
-
-
-
-
-
-

@@ -39,10 +39,6 @@
           <input type="text" id="redniBrojPrijava" required />
         </div>
         <div>
-          <label for="nacionalnost">Nacionalnost:</label>
-          <input type="text" id="nacionalnostPrijava" required />
-        </div>
-        <div>
           <label for="disciplina">Disciplina:</label>
           <input type="text" id="disciplinaPrijava" required />
         </div>
@@ -51,7 +47,11 @@
           <input type="text" id="stazaPrijava" required />
         </div>
         <div>
-          <label for="kategorija">Kategorija:</label>
+          <label for="vrijemeTrke">Vrijeme Trke:</label>
+          <input type="text" id="vrijemeTrkePrijava" required />
+        </div>
+        <div>
+          <label for="kategorijaPrijava">Kategorija:</label>
           <select id="kategorijaPrijava" required>
             <option value="">Odaberite kategoriju</option>
             <option value="Junior">Junior</option>
@@ -60,7 +60,7 @@
           </select>
         </div>
         <button
-        onclick="updateSchedule()"
+        onclick="saveSchedule()"
           id="prijava"
           class="prijava"
         >

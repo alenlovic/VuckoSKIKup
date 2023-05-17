@@ -1,8 +1,8 @@
-const imeInput = document.querySelector("#firstName");
-const prezimeInput = document.querySelector("#lastName");
-const godisteInput = document.querySelector("#yearOfBirth");
-const zemljaPorijeklaInput = document.querySelector("#nationality");
-const brojTelefonaInput = document.querySelector("#cellphoneNumber");
+const imeInput = document.querySelector("#ime");
+const prezimeInput = document.querySelector("#prezime");
+const godisteInput = document.querySelector("#godiste");
+const zemljaPorijeklaInput = document.querySelector("#zemljaPorijekla");
+const brojTelefonaInput = document.querySelector("#brojTelefona");
 const emailInput = document.querySelector("#email");
 const saveButton = document.querySelector("#btnSave");
 
@@ -76,13 +76,13 @@ getAllCompetitors();
 
 //schedule.html
 
-const imePrijava = document.querySelector("#ime");
-const prezimePrijava = document.querySelector("#prezime");
-const redniBrojPrijava = document.querySelector("#redniBroj");
-const disciplinaPrijava = document.querySelector("#disciplina");
-const stazaPrijava = document.querySelector("#staza");
-const vrijemeTrkePrijava = document.querySelector("#vrijemeTrke");
-const kategorijaPrijava = document.querySelector("#kategorija");
+const imePrijava = document.querySelector("#imePrijava");
+const prezimePrijava = document.querySelector("#prezimePrijava");
+const redniBrojPrijava = document.querySelector("#redniBrojPrijava");
+const disciplinaPrijava = document.querySelector("#disciplinaPrijava");
+const stazaPrijava = document.querySelector("#stazaPrijava");
+const vrijemeTrkePrijava = document.querySelector("#vrijemeTrkePrijava");
+const kategorijaPrijava = document.querySelector("#kategorijaPrijava");
 const prijava = document.querySelector("#prijava");
 
 function addCompetitorOnSchedule(

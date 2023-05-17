@@ -621,3 +621,9 @@ button:hover {
   border-bottom: #f3f3f3 solid 1px;
   margin-bottom: 10px;
 }
+
+.icons-aboutus span{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

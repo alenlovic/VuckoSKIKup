@@ -20,8 +20,8 @@ let imeInputEdit = document.querySelector("#ime");
 let prezimeInputEdit = document.querySelector("#prezime");
 let godisteInputEdit = document.querySelector("#godiste");
 let zemljaPorijeklaInputEdit = document.querySelector("#zemljaPorijekla");
-let brojTelefonaInputEdit = document.querySelector("#brojTelefona"); //
-let emailInputEdit = document.querySelector("#email"); //
+let brojTelefonaInputEdit = document.querySelector("#brojTelefona"); 
+let emailInputEdit = document.querySelector("#email"); 
 
 
 const id = getParamByName("id");

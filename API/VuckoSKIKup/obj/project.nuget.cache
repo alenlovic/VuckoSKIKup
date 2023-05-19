@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r81n/L/WQazP6D3+36sQ32C3ZoTERSXeviYZHpThaLEsE2QjNexRUYh0ZqgBlhUMS8JD+M4PSpxvgM/bQ7cZgA==",
+  "dgSpecHash": "0GKNfHeI13nXE2qwQ5kK/fOg7D8YyI3A7hXDSZONEmkAkDoYTB9h0/Cdqq2F1ZaV+uk4xEOgTHojoMmfxL4yAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alen\\Documents\\Projects\\VuckoSKIKup\\API\\VuckoSKIKup\\VuckoSKIKup.csproj",
   "expectedPackageFiles": [
@@ -64,6 +64,7 @@
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\7.0.5\\microsoft.visualstudio.web.codegeneration.7.0.5.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\7.0.5\\microsoft.visualstudio.web.codegeneration.core.7.0.5.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\7.0.5\\microsoft.visualstudio.web.codegeneration.design.7.0.5.nupkg.sha512",
